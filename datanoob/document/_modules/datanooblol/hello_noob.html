@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>datanooblol.get_document &mdash; mlsops_regression 00.00.01 documentation</title>
+  <title>datanooblol.hello_noob &mdash; mlsops_regression 00.00.01 documentation</title>
   
 
   
@@ -131,7 +131,7 @@
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
-      <li>datanooblol.get_document</li>
+      <li>datanooblol.hello_noob</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -146,38 +146,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for datanooblol.get_document</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">os</span>
-
-<div class="viewcode-block" id="init_doc"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.init_doc">[docs]</a><span class="k">def</span> <span class="nf">init_doc</span><span class="p">():</span>
+  <h1>Source code for datanooblol.hello_noob</h1><div class="highlight"><pre>
+<div class="viewcode-block" id="yo_noob"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.hello_noob.yo_noob">[docs]</a><span></span><span class="k">def</span> <span class="nf">yo_noob</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Initialize doc</span>
+<span class="sd">    Greeting to all noobs</span>
+<span class="sd">    </span>
+<span class="sd">    :param str name: user name</span>
+<span class="sd">    :param int num: number</span>
+<span class="sd">    :returns: hello noob with name</span>
+<span class="sd">    :rtype: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;yo noob: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+<div class="viewcode-block" id="f_noob"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.hello_noob.f_noob">[docs]</a><span class="k">def</span> <span class="nf">f_noob</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Greeting to all noobs</span>
+<span class="sd">    </span>
+<span class="sd">    :param str name: user name</span>
+<span class="sd">    :param int num: number</span>
+<span class="sd">    :returns: hello noob with name</span>
+<span class="sd">    :rtype: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;f* noob: </span><span class="si">{</span><span class="n">name</span><span class="si">}{</span><span class="n">num</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+<div class="viewcode-block" id="who_noob"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.hello_noob.who_noob">[docs]</a><span class="k">def</span> <span class="nf">who_noob</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find out who&#39;s the noob</span>
+
+<span class="sd">    :param str name: user name</span>
+<span class="sd">    :returns: name of the noob</span>
+<span class="sd">    :rtype: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Who&#39;s noob? </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you are a NOOB!!&quot;</span></div>
+
+<div class="viewcode-block" id="no_noob"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.hello_noob.no_noob">[docs]</a><span class="k">def</span> <span class="nf">no_noob</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    No noob</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/usr/src/datanoob/_docs&quot;</span>
-    <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;cd </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> &amp;&amp; make html&quot;</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
-    <span class="n">copy_to</span><span class="p">()</span></div>
-
-<div class="viewcode-block" id="update_doc"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.update_doc">[docs]</a><span class="k">def</span> <span class="nf">update_doc</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Update doc</span>
-<span class="sd">    </span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    
-    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/usr/src/datanoob/_docs&quot;</span>
-    <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;cd </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> &amp;&amp; make clean html&quot;</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
-    <span class="n">copy_to</span><span class="p">()</span></div>
-
-<div class="viewcode-block" id="copy_to"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.copy_to">[docs]</a><span class="k">def</span> <span class="nf">copy_to</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Copy to document</span>
-<span class="sd">    </span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;/usr/src/datanoob/_docs/_build/html/*&quot;</span>
-    <span class="n">target</span> <span class="o">=</span> <span class="s2">&quot;/usr/src/datanoob/document&quot;</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cp -Rf </span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;No Noob!!&quot;</span></div>
 </pre></div>
 
            </div>
