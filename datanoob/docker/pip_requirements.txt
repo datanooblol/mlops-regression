@@ -5,9 +5,11 @@ jupyterlab_tabnine
 # eli5
 # lime
 shapash
+explainerdashboard
 
 # drift detection
 evidently
+mljar-mercury
 
 # model tracking
 mlflow

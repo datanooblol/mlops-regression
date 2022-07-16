@@ -83,7 +83,10 @@
             
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../modules.html">datanooblol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.html">datanooblol package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.project_init.html">datanooblol.project_init package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.configuration.html">datanooblol.configuration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.extractor.html">datanooblol.extractor package</a></li>
 </ul>
 
             
@@ -164,11 +167,19 @@
 <span class="sd">    Update doc</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/usr/src/datanoob&quot;</span>
+    <span class="n">module_path</span> <span class="o">=</span> <span class="s2">&quot;datanooblol/&quot;</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;cd </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> &amp;&amp; sphinx-apidoc -o _docs </span><span class="si">{</span><span class="n">module_path</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">updated</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">updated</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;updated successfully&quot;</span><span class="p">)</span>
     
     <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/usr/src/datanoob/_docs&quot;</span>
     <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;cd </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> &amp;&amp; make clean html&quot;</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
-    <span class="n">copy_to</span><span class="p">()</span></div>
+    <span class="n">generated</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">generated</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">copy_to</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;generated successfully&quot;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="copy_to"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.copy_to">[docs]</a><span class="k">def</span> <span class="nf">copy_to</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>

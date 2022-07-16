@@ -7,7 +7,7 @@ def yo_noob(name: str, num: int) -> str:
     :returns: hello noob with name
     :rtype: str
     """
-    return f"yo noob: {name} {num}"
+    return f"yo noob 5555: {name} {num}"
 
 def f_noob(name: str, num: int) -> str:
     """
@@ -18,7 +18,7 @@ def f_noob(name: str, num: int) -> str:
     :returns: hello noob with name
     :rtype: str
     """
-    return f"f* noob: {name}{num}"
+    return f"f* noob: {name} {num}"
 
 def who_noob(name:str) -> str:
     """

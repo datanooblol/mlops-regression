@@ -10,7 +10,11 @@ Welcome to mlsops_regression's documentation!
    :maxdepth: 2
    :caption: Contents:
    
-   modules
+   datanooblol
+   datanooblol.project_init
+   datanooblol.configuration
+   datanooblol.extractor
+   
 
 
 

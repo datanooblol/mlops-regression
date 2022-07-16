@@ -15,11 +15,19 @@ def update_doc():
     Update doc
     
     """
+    path = "/usr/src/datanoob"
+    module_path = "datanooblol/"
+    command = f"cd {path} && sphinx-apidoc -o _docs {module_path}"
+    updated = os.system(command)
+    if updated == 0:
+        print("updated successfully")
     
     path = "/usr/src/datanoob/_docs"
     command = f"cd {path} && make clean html"
-    os.system(command)
-    copy_to()
+    generated = os.system(command)
+    if generated == 0:
+        copy_to()
+        print("generated successfully")
 
 def copy_to():
     """
