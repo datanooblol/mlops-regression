@@ -1,0 +1,24 @@
+feature_group:
+  entity:
+    house_id: int64
+  geography:
+    CHAS: int64
+    DIS: float64
+    RAD: int64
+  load_date:
+    load_dt: object
+  monetary:
+    TAX: float64
+  proportion:
+    B: float64
+    INDUS: float64
+    LSTAT: float64
+    PTRATIO: float64
+    RM: float64
+    ZN: float64
+  target:
+    MEDV: float64
+  timestamp_field:
+    event_timestamp: datetime64[ns]
+  toxic:
+    NOX: float64

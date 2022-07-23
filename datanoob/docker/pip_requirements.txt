@@ -33,3 +33,6 @@ duckdb
 
 # fs
 feast
+
+# eda
+dtale

@@ -5,6 +5,7 @@ version: 0.0.1
 test_int: 1
 
 data_repository:
+    repository: ../repository
     data_source: ../repository/data_source
     landing: ../repository/landing
     staging: ../repository/staging
@@ -12,16 +13,25 @@ data_repository:
     prediction: ../prediction
     artifact: ../artifact
     metadata: ../repository/metadata
-    
-features:
-    entity: [house_id]
-    target: [MEDV]
-    event_timestamp: [event_timestamp]
-    load_date: [load_dt]
-    proportion: [ZN, INDUS, RM, PTRATIO, B, LSTAT]
-    geography: [CHAS,DIS, RAD]
-    toxic: [NOX]
-    monetary: [TAX]
+    reference: ../repository/metadata/reference
+    database: ../repository/metadata/database
+
+feature_store_config:
+    fs_repo_config: ../config
+    feast_fs_yaml: ../config/feature_store.yaml
+    ttl: 1
+    materialize_day: 700
+
+# features:
+#     entity: [house_id]
+#     target: [MEDV]
+#     timestamp_field: [event_timestamp]
+#     event_timestamp: [event_timestamp]
+#     load_date: [load_dt]
+#     proportion: [ZN, INDUS, RM, PTRATIO, B, LSTAT]
+#     geography: [CHAS,DIS, RAD]
+#     toxic: [NOX]
+#     monetary: [TAX]
 
 feature_groups: [target, proportion, geography, toxic, monetary]
     
@@ -32,6 +42,9 @@ script:
     aggregate: ../script/aggregate.py
     join: ../script/join.py
     feature_engineering: ../script/feature_engineering.py
+    fv_register: ../script/fv_register.py
+    create_reference: ../script/create_reference.py
+    materialize: ../script/materialize.py
     scope_and_split: ../script/scope_and_split.py
     train: ../script/train.py
     benchmark: ../script/benchmark.py
@@ -39,5 +52,13 @@ script:
     online_serving: ../script/online_serving.py
     offline_serving: ../script/offline_serving.py
     drift_detection: ../script/drift_detection.py
+    
+model_tracking:
+    tracking_uri: "http://localhost:5000"
+    mlrun_path: "/usr/src/datanoob/repository/metadata/mlruns"
+    
+eda:
+    host: localhost
+    port: 555
 
     

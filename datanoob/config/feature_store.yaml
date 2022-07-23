@@ -1,0 +1,5 @@
+project: mlops_regression
+registry: ../repository/metadata/database/registry.db
+provider: local
+online_store:
+    path: ../repository/metadata/database/online_store.db

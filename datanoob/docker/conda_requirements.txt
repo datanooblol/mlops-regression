@@ -48,3 +48,6 @@ sphinx_rtd_theme
 # conda install -c basnijholt feast
 # fs
 # "basnijholt feast"
+
+# eda
+# dtale
