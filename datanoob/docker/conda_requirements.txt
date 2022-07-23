@@ -1,7 +1,6 @@
 #utils
 pip
-# pytest
-# psutil
+pytest
 
 # web
 flask
@@ -21,14 +20,6 @@ statsmodels
 # modeling
 scikit-learn
 
-# explanability
-# eli5
-# lime
-shap
-
-# dimensionality reduction
-# umap-learn
-
 # visualization
 matplotlib
 seaborn
@@ -41,13 +32,3 @@ pyyaml
 # docs
 sphinx
 sphinx_rtd_theme
-
-# api
-# fastapi
-
-# conda install -c basnijholt feast
-# fs
-# "basnijholt feast"
-
-# eda
-# dtale

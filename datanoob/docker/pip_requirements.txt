@@ -2,13 +2,15 @@
 jupyterlab_tabnine
 
 # explanability
-# eli5
-# lime
+eli5==0.13.0
+lime==0.2.0.1
+shap==0.41.0
+Shapely==1.8.2
 shapash
-explainerdashboard
+explainerdashboard==0.3.8.2
 
 # drift detection
-evidently
+evidently==0.1.53.dev0
 mljar-mercury
 
 # model tracking
@@ -23,16 +25,22 @@ xgboost
 umap-learn
 
 #viz
-wordcloud
+wordcloud==1.5.0
+dash-bootstrap-components
 
 # api
-fastapi
+fastapi==0.79.0
 
 # db
 duckdb
 
 # fs
-feast
+feast==0.22.0
 
 # eda
-dtale
+dtale==2.6.0
+
+# DAGs
+dagster==0.15.7
+dagster-graphql==0.15.7
+dagit==0.15.7
