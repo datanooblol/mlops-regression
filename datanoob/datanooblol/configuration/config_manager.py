@@ -54,6 +54,10 @@ class LoadRepoConfig(BaseConfig):
     def DATABASE_ZONE(self) -> str:
         return self._get_config()[self.param]["database"]
     
+    @property
+    def EXPERIMENT_ZONE(self) -> str:
+        return self._get_config()[self.param]["experiment"]
+    
 class LoadFeatureStoreConfig(BaseConfig):
     def __init__(self):
         super().__init__()
@@ -155,3 +159,44 @@ class EDAConfig(BaseConfig):
     @property
     def PORT(self):
         return self._get_config()[self.param]["port"]
+    
+class ExperimentConfig(BaseConfig):
+    def __init__(self, experiment_file:str, Xy:str=None):
+        super().__init__()
+        # self.config_path = f"../repository/metadata/experiment/{experiment_file}"
+        self.config_path = experiment_file
+        self.param = Xy
+    
+    @property
+    def Xy_CONFIG(self):
+        return self._get_config()[self.param]
+    
+    # @property
+    # def MODEL_AVILABLE(self):
+    #     return self._get_config()["model"]
+    @property
+    def PROJECT(self):
+        return self._get_config()["project"]
+    
+    @property
+    def OBJECTIVE(self):
+        return self._get_config()["objective"]
+    
+    @property
+    def STAGE(self):
+        return self._get_config()["stage"]
+    
+    @property
+    def DESC(self):
+        return self._get_config()["experiment_desc"]
+
+class ModelConfig(BaseConfig):
+    def __init__(self, experiment_file:str):
+        super().__init__()
+        # self.config_path = f"../repository/metadata/experiment/{experiment_file}"
+        self.config_path = experiment_file
+        self.param = "model"
+    
+    @property
+    def EXPERIMENT_MODEL(self):
+        return self._get_config()[self.param]

@@ -1,12 +1,12 @@
 project: boston_regression
 objective: regression
-experiment_desc: this is a baseline
+experiment_desc: this is a scaling
 stage: basline
 
 X:
-    # ZScaler: ['CHAS', 'DIS', 'RAD', 'TAX', 'B', 'INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN', 'NOX']
+    ZScaler: ['CHAS', 'DIS', 'RAD', 'TAX', 'B', 'INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN', 'NOX']
     # MMScaler: ['CHAS', 'DIS', 'RAD', 'TAX', 'B', 'INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN', 'NOX']
-    PassThrough: ['CHAS', 'DIS', 'RAD', 'TAX', 'B', 'INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN', 'NOX']
+    # PassThrough: ['CHAS', 'DIS', 'RAD', 'TAX', 'B', 'INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN', 'NOX']
     # FeatureSelector: ['CHAS', 'DIS', 'RAD', 'TAX', 'B', 'INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN', 'NOX']
 y:
     # ZScaler: ["MEDV"]

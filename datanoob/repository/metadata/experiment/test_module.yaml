@@ -1,0 +1,15 @@
+experiment_desc: this is a test
+
+X:
+    # ZScaler: ['CHAS', 'DIS', 'RAD', 'TAX', 'B', 'INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN', 'NOX']
+    # BinaryBoi: ["DIS"]
+    ZScaler: ['CHAS', 'DIS', 'RAD', 'TAX', 'B']
+    MMScaler: ['INDUS', 'LSTAT', 'PTRATIO', 'RM', 'ZN']
+    PassThrough: ['NOX']
+    FeatureSelector: ['CHAS', 'NOX']
+y:
+    # ZScaler: ["MEDV"]
+    PassThrough: ["MEDV"]
+    
+model:
+    regression: {"default":"default"}

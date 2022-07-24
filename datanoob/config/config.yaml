@@ -15,6 +15,7 @@ data_repository:
     metadata: ../repository/metadata
     reference: ../repository/metadata/reference
     database: ../repository/metadata/database
+    experiment: ../repository/metadata/experiment
 
 feature_store_config:
     fs_repo_config: ../config

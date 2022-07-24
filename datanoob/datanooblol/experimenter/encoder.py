@@ -2,7 +2,7 @@ from datanooblol.utils.base import BaseFitTransform
 import importlib
 
 class BinaryEncoder(BaseFitTransform):
-    def __init__(self, encoded_features, value_map):
+    def __init__(self, encoded_features, value_map:dict):
         super().__init__()
         self.encoded_features = encoded_features
         self.value_map = value_map

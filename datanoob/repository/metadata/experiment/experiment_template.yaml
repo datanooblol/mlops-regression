@@ -1,0 +1,28 @@
+imputer:
+    simple:
+        mean: []
+        median: []
+        mode: []
+    group:
+        mean: []
+        median: []
+        mode: []
+
+scaling:
+    standard: []
+    minmax: []
+    yeo-johnson: []
+    box-cox: []
+
+encoding:
+    one_hot: [feat1, featn]
+    # use binary: None if no features need to be done
+    # use binary: {key, value} if any features need to be done
+    binary:
+        feat1:
+            original1: new1
+            original2: new2
+    labelencoding: [feat1, featn]
+    
+feature_selection:
+    passthrough: True

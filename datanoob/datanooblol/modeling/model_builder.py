@@ -24,8 +24,11 @@ class ModelBuilder:
     def build(self, model_name:str=None, model=None, parameters:dict=None) -> list:
         param_list = []
         param_name = list(parameters.keys())
-        param_value = list(parameters.values())
-        param_value = list(itertools.product(*param_value))
-        for param in param_value:
-            param_list.append({k:v for k, v in zip(param_name, param)})
-        return [(model_name, model(**param_dict), param_dict) for param_dict in param_list]
+        if "default" not in param_name:
+            param_value = list(parameters.values())
+            param_value = list(itertools.product(*param_value))
+            for param in param_value:
+                param_list.append({k:v for k, v in zip(param_name, param)})
+            return [(model_name, model(**param_dict), param_dict) for param_dict in param_list]
+        else:
+            return [(model_name, model(), parameters)]

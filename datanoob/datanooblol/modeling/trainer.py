@@ -1,8 +1,9 @@
 import mlflow
 import os
 import pickle
-import timeit
+# import timeit
 import importlib
+from tqdm import tqdm
 from datanooblol.configuration.config_manager import LoadModelTrackingConfig
 
 class Trainer:
@@ -26,6 +27,7 @@ class Trainer:
             experiment_path = f"{self.tracking_cfg.MLRUN_PATH}/{experiment_id}/{run_id}/artifacts/experiment"
             tags = {
                 "experiment": self.experiment_name,
+                "model_name": model_name,
                 "stage":self.stage,
                 "feature_n": X_train.shape[1],
                 "run_id": run_id,
@@ -45,6 +47,7 @@ class Trainer:
 
     def fit(self, X_train, y_train, X_test, y_test):
         # mlflow.set_tracking_uri(self.tracking_cfg.TRACKING_URI)
-        for model_name, model, param in self.models:
+        # for model_name, model, param in self.models:
+        for model_name, model, param in tqdm(self.models, desc="Training..."):
             self._fit_tracking(model_name, model, param, 
                                X_train, y_train, X_test, y_test)

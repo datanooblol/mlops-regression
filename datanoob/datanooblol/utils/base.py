@@ -2,6 +2,7 @@ class BaseFitTransform:
     
     def __init__(self):
         self._is_fit = False
+        self.features = None
 
     def _fit(self, X):
         pass
