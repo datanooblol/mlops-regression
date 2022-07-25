@@ -1,6 +1,8 @@
 import os
 
-def init_doc():
+# these below functions needed to be revised as a general function for using in other projects
+
+def init_doc() -> None:
     """
     Initialize doc
     
@@ -10,7 +12,7 @@ def init_doc():
     os.system(command)
     copy_to()
 
-def update_doc():
+def update_doc() -> None:
     """
     Update doc
     
@@ -29,7 +31,7 @@ def update_doc():
         copy_to()
         print("generated successfully")
 
-def copy_to():
+def copy_to() -> None:
     """
     Copy to document
     

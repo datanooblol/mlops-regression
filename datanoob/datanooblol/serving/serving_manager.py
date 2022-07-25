@@ -4,6 +4,10 @@ from datanooblol.configuration.config_manager import LoadModelTrackingConfig
 
 
 class Serving:
+    """
+    Serving class is used for deployment and production phase. It extracts experiment and model objects based on model run_id of MLflow tracking
+    
+    """
     def __init__(self, project:str, run_id:str):
         self.project = project
         self.run_id = run_id
@@ -22,4 +26,4 @@ class Serving:
     
     def predict(self, X):
         loaded_exp, loaded_model = self.get_serving_object
-        return loaded_model.predict(loaded_exp.transform(X))
+        return loaded_model.predict(loaded_exp.X.transform(X))

@@ -1,6 +1,10 @@
 from importlib import import_module
 
 class ModelCatalogue:
+    """
+    A list of models available for experiment
+    
+    """
     def __init__(self):
         self.model_catalogue = {
             "LinearRegression": f"sklearn.linear_model",

@@ -87,6 +87,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../datanooblol.project_init.html">datanooblol.project_init package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datanooblol.configuration.html">datanooblol.configuration package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datanooblol.extractor.html">datanooblol.extractor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.configuration.html">datanooblol.configuration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.data_quality.html">datanooblol.data_quality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.evaluator.html">datanooblol.evaluator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.experimenter.html">datanooblol.experimenter package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.feature_store.html">datanooblol.feature_store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.modeling.html">datanooblol.modeling package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.serving.html">datanooblol.serving package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.uploader.html">datanooblol.uploader package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datanooblol.utils.html">datanooblol.utils package</a></li>
 </ul>
 
             
@@ -152,7 +161,9 @@
   <h1>Source code for datanooblol.get_document</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">os</span>
 
-<div class="viewcode-block" id="init_doc"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.init_doc">[docs]</a><span class="k">def</span> <span class="nf">init_doc</span><span class="p">():</span>
+<span class="c1"># these below functions needed to be revised as a general function for using in other projects</span>
+
+<div class="viewcode-block" id="init_doc"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.init_doc">[docs]</a><span class="k">def</span> <span class="nf">init_doc</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Initialize doc</span>
 <span class="sd">    </span>
@@ -162,7 +173,7 @@
     <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
     <span class="n">copy_to</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="update_doc"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.update_doc">[docs]</a><span class="k">def</span> <span class="nf">update_doc</span><span class="p">():</span>
+<div class="viewcode-block" id="update_doc"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.update_doc">[docs]</a><span class="k">def</span> <span class="nf">update_doc</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Update doc</span>
 <span class="sd">    </span>
@@ -181,7 +192,7 @@
         <span class="n">copy_to</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;generated successfully&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="copy_to"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.copy_to">[docs]</a><span class="k">def</span> <span class="nf">copy_to</span><span class="p">():</span>
+<div class="viewcode-block" id="copy_to"><a class="viewcode-back" href="../../datanooblol.html#datanooblol.get_document.copy_to">[docs]</a><span class="k">def</span> <span class="nf">copy_to</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Copy to document</span>
 <span class="sd">    </span>

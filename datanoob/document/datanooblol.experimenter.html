@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>datanooblol.experimenter package &mdash; mlsops_regression 00.00.01 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="datanooblol.feature_store package" href="datanooblol.feature_store.html" />
+    <link rel="prev" title="datanooblol.evaluator package" href="datanooblol.evaluator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mlsops_regression
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.html">datanooblol package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.project_init.html">datanooblol.project_init package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.configuration.html">datanooblol.configuration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.extractor.html">datanooblol.extractor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.configuration.html">datanooblol.configuration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.data_quality.html">datanooblol.data_quality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.evaluator.html">datanooblol.evaluator package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">datanooblol.experimenter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.encoder">datanooblol.experimenter.encoder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.experiment">datanooblol.experimenter.experiment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.experiment_catalogue">datanooblol.experimenter.experiment_catalogue module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.experiment_generator">datanooblol.experimenter.experiment_generator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.feature_selector">datanooblol.experimenter.feature_selector module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.imputer">datanooblol.experimenter.imputer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.scaler">datanooblol.experimenter.scaler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter.scope_data">datanooblol.experimenter.scope_data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.experimenter">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.feature_store.html">datanooblol.feature_store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.modeling.html">datanooblol.modeling package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.serving.html">datanooblol.serving package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.uploader.html">datanooblol.uploader package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.utils.html">datanooblol.utils package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mlsops_regression</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>datanooblol.experimenter package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/datanooblol.experimenter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="datanooblol-experimenter-package">
+<h1>datanooblol.experimenter package<a class="headerlink" href="#datanooblol-experimenter-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-datanooblol.experimenter.encoder">
+<span id="datanooblol-experimenter-encoder-module"></span><h2>datanooblol.experimenter.encoder module<a class="headerlink" href="#module-datanooblol.experimenter.encoder" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.encoder.BinaryEncoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.encoder.</span></span><span class="sig-name descname"><span class="pre">BinaryEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoded_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/encoder.html#BinaryEncoder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.encoder.BinaryEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.encoder.LabelEncoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.encoder.</span></span><span class="sig-name descname"><span class="pre">LabelEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoded_features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/encoder.html#LabelEncoder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.encoder.LabelEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.encoder.OneHotEncoder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.encoder.</span></span><span class="sig-name descname"><span class="pre">OneHotEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoded_features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/encoder.html#OneHotEncoder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.encoder.OneHotEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-datanooblol.experimenter.experiment">
+<span id="datanooblol-experimenter-experiment-module"></span><h2>datanooblol.experimenter.experiment module<a class="headerlink" href="#module-datanooblol.experimenter.experiment" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-datanooblol.experimenter.experiment_catalogue">
+<span id="datanooblol-experimenter-experiment-catalogue-module"></span><h2>datanooblol.experimenter.experiment_catalogue module<a class="headerlink" href="#module-datanooblol.experimenter.experiment_catalogue" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.experiment_catalogue.ExperimentCatalogue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.experiment_catalogue.</span></span><span class="sig-name descname"><span class="pre">ExperimentCatalogue</span></span><a class="reference internal" href="_modules/datanooblol/experimenter/experiment_catalogue.html#ExperimentCatalogue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.experiment_catalogue.ExperimentCatalogue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datanooblol.experimenter.experiment_catalogue.ExperimentCatalogue.get_experiment_task">
+<span class="sig-name descname"><span class="pre">get_experiment_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/experiment_catalogue.html#ExperimentCatalogue.get_experiment_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.experiment_catalogue.ExperimentCatalogue.get_experiment_task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-datanooblol.experimenter.experiment_generator">
+<span id="datanooblol-experimenter-experiment-generator-module"></span><h2>datanooblol.experimenter.experiment_generator module<a class="headerlink" href="#module-datanooblol.experimenter.experiment_generator" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.experiment_generator.ExperimentGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.experiment_generator.</span></span><span class="sig-name descname"><span class="pre">ExperimentGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/experiment_generator.html#ExperimentGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.experiment_generator.ExperimentGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+<p>Pack necessary transform tasks into one single object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>experiment_file</strong> (<em>str</em>) – path for a selected experiment</p></li>
+<li><p><strong>Xy</strong> (<em>str</em>) – select X or y tasks</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.DataFrame in transform or fit_transform method</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.experiment_generator.ExperimentPackage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.experiment_generator.</span></span><span class="sig-name descname"><span class="pre">ExperimentPackage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/experiment_generator.html#ExperimentPackage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.experiment_generator.ExperimentPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-datanooblol.experimenter.feature_selector">
+<span id="datanooblol-experimenter-feature-selector-module"></span><h2>datanooblol.experimenter.feature_selector module<a class="headerlink" href="#module-datanooblol.experimenter.feature_selector" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.feature_selector.BaseSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.feature_selector.</span></span><span class="sig-name descname"><span class="pre">BaseSelector</span></span><a class="reference internal" href="_modules/datanooblol/experimenter/feature_selector.html#BaseSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.feature_selector.BaseSelector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datanooblol.experimenter.feature_selector.BaseSelector.to_frame">
+<span class="sig-name descname"><span class="pre">to_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/feature_selector.html#BaseSelector.to_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.feature_selector.BaseSelector.to_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.feature_selector.FeatureSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.feature_selector.</span></span><span class="sig-name descname"><span class="pre">FeatureSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/feature_selector.html#FeatureSelector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.feature_selector.FeatureSelector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.feature_selector.BaseSelector" title="datanooblol.experimenter.feature_selector.BaseSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSelector</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.feature_selector.PassThrough">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.feature_selector.</span></span><span class="sig-name descname"><span class="pre">PassThrough</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/feature_selector.html#PassThrough"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.feature_selector.PassThrough" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.feature_selector.BaseSelector" title="datanooblol.experimenter.feature_selector.BaseSelector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSelector</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-datanooblol.experimenter.imputer">
+<span id="datanooblol-experimenter-imputer-module"></span><h2>datanooblol.experimenter.imputer module<a class="headerlink" href="#module-datanooblol.experimenter.imputer" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.imputer.BaseImputer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.imputer.</span></span><span class="sig-name descname"><span class="pre">BaseImputer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imputed_feature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/imputer.html#BaseImputer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.imputer.BaseImputer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.imputer.GroupImputer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.imputer.</span></span><span class="sig-name descname"><span class="pre">GroupImputer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imputed_feature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statistics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'mean'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/imputer.html#GroupImputer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.imputer.GroupImputer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.imputer.BaseImputer" title="datanooblol.experimenter.imputer.BaseImputer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseImputer</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.imputer.SimpleImputer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.imputer.</span></span><span class="sig-name descname"><span class="pre">SimpleImputer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imputed_feature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imputed_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/imputer.html#SimpleImputer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.imputer.SimpleImputer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.imputer.BaseImputer" title="datanooblol.experimenter.imputer.BaseImputer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseImputer</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.imputer.StatisticsImputer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.imputer.</span></span><span class="sig-name descname"><span class="pre">StatisticsImputer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imputed_feature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statistics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">round_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/imputer.html#StatisticsImputer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.imputer.StatisticsImputer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.imputer.BaseImputer" title="datanooblol.experimenter.imputer.BaseImputer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseImputer</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-datanooblol.experimenter.scaler">
+<span id="datanooblol-experimenter-scaler-module"></span><h2>datanooblol.experimenter.scaler module<a class="headerlink" href="#module-datanooblol.experimenter.scaler" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.BaseScaler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.scaler.</span></span><span class="sig-name descname"><span class="pre">BaseScaler</span></span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#BaseScaler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.BaseScaler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.BaseScaler.to_frame">
+<span class="sig-name descname"><span class="pre">to_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#BaseScaler.to_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.BaseScaler.to_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.BoxCoxScaler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.scaler.</span></span><span class="sig-name descname"><span class="pre">BoxCoxScaler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#BoxCoxScaler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.BoxCoxScaler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.scaler.BaseScaler" title="datanooblol.experimenter.scaler.BaseScaler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScaler</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.MMScaler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.scaler.</span></span><span class="sig-name descname"><span class="pre">MMScaler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#MMScaler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.MMScaler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.scaler.BaseScaler" title="datanooblol.experimenter.scaler.BaseScaler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScaler</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.Scaler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.scaler.</span></span><span class="sig-name descname"><span class="pre">Scaler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scaled_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#Scaler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.Scaler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform" title="datanooblol.utils.base.BaseFitTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFitTransform</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.Scaler.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#Scaler.fit_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.Scaler.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.YeoJohnsonScaler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.scaler.</span></span><span class="sig-name descname"><span class="pre">YeoJohnsonScaler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#YeoJohnsonScaler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.YeoJohnsonScaler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.scaler.BaseScaler" title="datanooblol.experimenter.scaler.BaseScaler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScaler</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scaler.ZScaler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.scaler.</span></span><span class="sig-name descname"><span class="pre">ZScaler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scaler.html#ZScaler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scaler.ZScaler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.experimenter.scaler.BaseScaler" title="datanooblol.experimenter.scaler.BaseScaler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseScaler</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-datanooblol.experimenter.scope_data">
+<span id="datanooblol-experimenter-scope-data-module"></span><h2>datanooblol.experimenter.scope_data module<a class="headerlink" href="#module-datanooblol.experimenter.scope_data" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scope_data.ScopeData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.experimenter.scope_data.</span></span><span class="sig-name descname"><span class="pre">ScopeData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">55</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stratify</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_feat_grp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_feat_grp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/experimenter/scope_data.html#ScopeData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.experimenter.scope_data.ScopeData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ReferenceExtractor</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.experimenter.scope_data.ScopeData.split_data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">split_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#datanooblol.experimenter.scope_data.ScopeData.split_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-datanooblol.experimenter">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-datanooblol.experimenter" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="datanooblol.feature_store.html" class="btn btn-neutral float-right" title="datanooblol.feature_store package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="datanooblol.evaluator.html" class="btn btn-neutral float-left" title="datanooblol.evaluator package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, doublebank
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -14,6 +14,15 @@ Welcome to mlsops_regression's documentation!
    datanooblol.project_init
    datanooblol.configuration
    datanooblol.extractor
+   datanooblol.configuration
+   datanooblol.data_quality
+   datanooblol.evaluator
+   datanooblol.experimenter
+   datanooblol.feature_store
+   datanooblol.modeling
+   datanooblol.serving
+   datanooblol.uploader
+   datanooblol.utils
    
 
 

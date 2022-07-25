@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="datanooblol.data_quality package" href="datanooblol.data_quality.html" />
     <link rel="prev" title="datanooblol.configuration package" href="datanooblol.configuration.html" /> 
 </head>
 
@@ -94,6 +95,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.extractor">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.configuration.html">datanooblol.configuration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.data_quality.html">datanooblol.data_quality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.evaluator.html">datanooblol.evaluator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.experimenter.html">datanooblol.experimenter package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.feature_store.html">datanooblol.feature_store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.modeling.html">datanooblol.modeling package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.serving.html">datanooblol.serving package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.uploader.html">datanooblol.uploader package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.utils.html">datanooblol.utils package</a></li>
 </ul>
 
             
@@ -167,39 +177,27 @@
 <span id="datanooblol-extractor-data-extractor-module"></span><h2>datanooblol.extractor.data_extractor module<a class="headerlink" href="#module-datanooblol.extractor.data_extractor" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="datanooblol.extractor.data_extractor.DataExtractor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.extractor.data_extractor.</span></span><span class="sig-name descname"><span class="pre">DataExtractor</span></span><a class="reference internal" href="_modules/datanooblol/extractor/data_extractor.html#DataExtractor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.extractor.data_extractor.DataExtractor" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.extractor.data_extractor.</span></span><span class="sig-name descname"><span class="pre">DataExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/extractor/data_extractor.html#DataExtractor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.extractor.data_extractor.DataExtractor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="datanooblol.extractor.data_extractor.DataExtractor.extract_landing">
-<span class="sig-name descname"><span class="pre">extract_landing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_grp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/datanooblol/extractor/data_extractor.html#DataExtractor.extract_landing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.extractor.data_extractor.DataExtractor.extract_landing" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extract feature group from landing zone and return dataframe</p>
+<p>Extract data from each zone</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>feature_grp</strong> (<em>str</em>) – name of feature group</p></li>
 <li><p><strong>end_date</strong> (<em>str</em>) – end date</p></li>
 <li><p><strong>start_date</strong> (<em>str</em>) – start date</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>pandas dataframe</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>pd.DataFrame</p>
-</dd>
 </dl>
-</dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="datanooblol.extractor.data_extractor.DataExtractor.extract_staging">
-<span class="sig-name descname"><span class="pre">extract_staging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_grp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/datanooblol/extractor/data_extractor.html#DataExtractor.extract_staging"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.extractor.data_extractor.DataExtractor.extract_staging" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extract feature group from staging zone and return dataframe</p>
+<dt class="sig sig-object py" id="datanooblol.extractor.data_extractor.DataExtractor.extract_zone">
+<span class="sig-name descname"><span class="pre">extract_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_grp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/datanooblol/extractor/data_extractor.html#DataExtractor.extract_zone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.extractor.data_extractor.DataExtractor.extract_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract feature group based on a selected zone and return dataframe</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>zone</strong> (<em>str</em>) – extract based on zone - optional argument - [landing, staging, feature_store]</p></li>
+<li><p><strong>step</strong> (<em>str</em>) – extract based on step and used exculsively with staging area - default = None - optional argument - [None, cleaned, aggregated, joined]</p></li>
 <li><p><strong>feature_grp</strong> (<em>str</em>) – name of feature group</p></li>
-<li><p><strong>end_date</strong> (<em>str</em>) – end date</p></li>
-<li><p><strong>start_date</strong> (<em>str</em>) – start date</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -226,6 +224,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="datanooblol.data_quality.html" class="btn btn-neutral float-right" title="datanooblol.data_quality package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="datanooblol.configuration.html" class="btn btn-neutral float-left" title="datanooblol.configuration package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

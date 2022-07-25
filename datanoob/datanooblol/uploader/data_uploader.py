@@ -3,6 +3,10 @@ import os
 from datanooblol.configuration.config_manager import LoadFeatureConfig, LoadRepoConfig
 
 class DataUploader:
+    """
+    Upload data into a zone and stage based on input parameters
+    
+    """
     def __init__(self):
         self.feat_cfg = LoadFeatureConfig()
         self.repo_cfg = LoadRepoConfig()

@@ -87,6 +87,15 @@
 <li class="toctree-l1"><a class="reference internal" href="datanooblol.project_init.html">datanooblol.project_init package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datanooblol.configuration.html">datanooblol.configuration package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datanooblol.extractor.html">datanooblol.extractor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.configuration.html">datanooblol.configuration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.data_quality.html">datanooblol.data_quality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.evaluator.html">datanooblol.evaluator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.experimenter.html">datanooblol.experimenter package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.feature_store.html">datanooblol.feature_store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.modeling.html">datanooblol.modeling package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.serving.html">datanooblol.serving package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.uploader.html">datanooblol.uploader package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.utils.html">datanooblol.utils package</a></li>
 </ul>
 
             
@@ -160,15 +169,21 @@
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
  | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
  | <a href="#Y"><strong>Y</strong></a>
+ | <a href="#Z"><strong>Z</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -184,13 +199,41 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.BaseConfig">BaseConfig (class in datanooblol.configuration.config_manager)</a>
 </li>
+      <li><a href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform">BaseFitTransform (class in datanooblol.utils.base)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.imputer.BaseImputer">BaseImputer (class in datanooblol.experimenter.imputer)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.BaseScaler">BaseScaler (class in datanooblol.experimenter.scaler)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.feature_selector.BaseSelector">BaseSelector (class in datanooblol.experimenter.feature_selector)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.encoder.BinaryEncoder">BinaryEncoder (class in datanooblol.experimenter.encoder)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.BoxCoxScaler">BoxCoxScaler (class in datanooblol.experimenter.scaler)</a>
+</li>
+      <li><a href="datanooblol.modeling.html#datanooblol.modeling.classification_builder.ModelBuilder.build">build() (datanooblol.modeling.classification_builder.ModelBuilder method)</a>
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#datanooblol.modeling.model_builder.ModelBuilder.build">(datanooblol.modeling.model_builder.ModelBuilder method)</a>
+</li>
+        <li><a href="datanooblol.modeling.html#datanooblol.modeling.regression_builder.ModelBuilder.build">(datanooblol.modeling.regression_builder.ModelBuilder method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.CONFIG">CONFIG (datanooblol.configuration.config_manager.LoadFeatureStoreConfig property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datanooblol.html#datanooblol.get_document.copy_to">copy_to() (in module datanooblol.get_document)</a>
+</li>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_manager.FeatureStoreRegister.create_dataset">create_dataset (datanooblol.feature_store.feature_manager.FeatureStoreRegister property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -199,6 +242,8 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.DATA_SOURCE">DATA_SOURCE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.DATABASE_ZONE">DATABASE_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
 </li>
       <li><a href="datanooblol.extractor.html#datanooblol.extractor.data_extractor.DataExtractor">DataExtractor (class in datanooblol.extractor.data_extractor)</a>
 </li>
@@ -224,19 +269,145 @@
 </li>
       </ul></li>
       <li>
+    datanooblol.data_quality
+
+      <ul>
+        <li><a href="datanooblol.data_quality.html#module-datanooblol.data_quality">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.data_quality.health_check
+
+      <ul>
+        <li><a href="datanooblol.data_quality.html#module-datanooblol.data_quality.health_check">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.eda
+
+      <ul>
+        <li><a href="datanooblol.eda.html#module-datanooblol.eda">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.eda.fast_eda
+
+      <ul>
+        <li><a href="datanooblol.eda.html#module-datanooblol.eda.fast_eda">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.evaluator
+
+      <ul>
+        <li><a href="datanooblol.evaluator.html#module-datanooblol.evaluator">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.evaluator.regression_evaluator
+
+      <ul>
+        <li><a href="datanooblol.evaluator.html#module-datanooblol.evaluator.regression_evaluator">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.encoder
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.encoder">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.experiment
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.experiment">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.experiment_catalogue
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.experiment_catalogue">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.experiment_generator
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.experiment_generator">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.feature_selector
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.feature_selector">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.imputer
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.imputer">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.scaler
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.scaler">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.experimenter.scope_data
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.scope_data">module</a>
+</li>
+      </ul></li>
+      <li>
     datanooblol.extractor
 
       <ul>
         <li><a href="datanooblol.extractor.html#module-datanooblol.extractor">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datanooblol.extractor.data_extractor
 
       <ul>
         <li><a href="datanooblol.extractor.html#module-datanooblol.extractor.data_extractor">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    datanooblol.feature_store
+
+      <ul>
+        <li><a href="datanooblol.feature_store.html#module-datanooblol.feature_store">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.feature_store.feature_manager
+
+      <ul>
+        <li><a href="datanooblol.feature_store.html#module-datanooblol.feature_store.feature_manager">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.feature_store.feature_register
+
+      <ul>
+        <li><a href="datanooblol.feature_store.html#module-datanooblol.feature_store.feature_register">module</a>
 </li>
       </ul></li>
       <li>
@@ -254,6 +425,55 @@
 </li>
       </ul></li>
       <li>
+    datanooblol.modeling
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.modeling.classification_builder
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.classification_builder">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.modeling.model_builder
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.model_builder">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.modeling.model_catalogue
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.model_catalogue">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.modeling.model_generator
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.model_generator">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.modeling.regression_builder
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.regression_builder">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.modeling.trainer
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.trainer">module</a>
+</li>
+      </ul></li>
+      <li>
     datanooblol.project_init
 
       <ul>
@@ -267,17 +487,88 @@
         <li><a href="datanooblol.project_init.html#module-datanooblol.project_init.initialize">module</a>
 </li>
       </ul></li>
+      <li>
+    datanooblol.serving
+
+      <ul>
+        <li><a href="datanooblol.serving.html#module-datanooblol.serving">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.serving.serving_manager
+
+      <ul>
+        <li><a href="datanooblol.serving.html#module-datanooblol.serving.serving_manager">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.uploader
+
+      <ul>
+        <li><a href="datanooblol.uploader.html#module-datanooblol.uploader">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.uploader.data_uploader
+
+      <ul>
+        <li><a href="datanooblol.uploader.html#module-datanooblol.uploader.data_uploader">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.utils
+
+      <ul>
+        <li><a href="datanooblol.utils.html#module-datanooblol.utils">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.utils.base
+
+      <ul>
+        <li><a href="datanooblol.utils.html#module-datanooblol.utils.base">module</a>
+</li>
+      </ul></li>
+      <li>
+    datanooblol.utils.calculator
+
+      <ul>
+        <li><a href="datanooblol.utils.html#module-datanooblol.utils.calculator">module</a>
+</li>
+      </ul></li>
+      <li><a href="datanooblol.uploader.html#datanooblol.uploader.data_uploader.DataUploader">DataUploader (class in datanooblol.uploader.data_uploader)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ExperimentConfig.DESC">DESC (datanooblol.configuration.config_manager.ExperimentConfig property)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="datanooblol.extractor.html#datanooblol.extractor.data_extractor.DataExtractor.extract_landing">extract_landing() (datanooblol.extractor.data_extractor.DataExtractor method)</a>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.EDAConfig">EDAConfig (class in datanooblol.configuration.config_manager)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig.ENTITY">ENTITY (datanooblol.configuration.config_manager.LoadFeatureConfig property)</a>
+</li>
+      <li><a href="datanooblol.evaluator.html#datanooblol.evaluator.regression_evaluator.Evaluator.evaluate">evaluate() (datanooblol.evaluator.regression_evaluator.Evaluator method)</a>
+</li>
+      <li><a href="datanooblol.evaluator.html#datanooblol.evaluator.regression_evaluator.Evaluator">Evaluator (class in datanooblol.evaluator.regression_evaluator)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ModelConfig.EXPERIMENT_MODEL">EXPERIMENT_MODEL (datanooblol.configuration.config_manager.ModelConfig property)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="datanooblol.extractor.html#datanooblol.extractor.data_extractor.DataExtractor.extract_staging">extract_staging() (datanooblol.extractor.data_extractor.DataExtractor method)</a>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.EXPERIMENT_ZONE">EXPERIMENT_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.experiment_catalogue.ExperimentCatalogue">ExperimentCatalogue (class in datanooblol.experimenter.experiment_catalogue)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ExperimentConfig">ExperimentConfig (class in datanooblol.configuration.config_manager)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.experiment_generator.ExperimentGenerator">ExperimentGenerator (class in datanooblol.experimenter.experiment_generator)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.experiment_generator.ExperimentPackage">ExperimentPackage (class in datanooblol.experimenter.experiment_generator)</a>
+</li>
+      <li><a href="datanooblol.extractor.html#datanooblol.extractor.data_extractor.DataExtractor.extract_zone">extract_zone() (datanooblol.extractor.data_extractor.DataExtractor method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -287,9 +578,33 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datanooblol.html#datanooblol.hello_noob.f_noob">f_noob() (in module datanooblol.hello_noob)</a>
 </li>
+      <li><a href="datanooblol.eda.html#datanooblol.eda.fast_eda.FastEDA">FastEDA (class in datanooblol.eda.fast_eda)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURE_GROUP">FEATURE_GROUP (datanooblol.configuration.config_manager.LoadFeatureConfig property)</a>
+</li>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_register.FeatureRegister">FeatureRegister (class in datanooblol.feature_store.feature_register)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURES">FEATURES() (datanooblol.configuration.config_manager.LoadFeatureConfig method)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.feature_selector.FeatureSelector">FeatureSelector (class in datanooblol.experimenter.feature_selector)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURES">FEATURES() (datanooblol.configuration.config_manager.LoadFeatureConfig method)</a>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_manager.FeatureStoreRegister">FeatureStoreRegister (class in datanooblol.feature_store.feature_manager)</a>
+</li>
+      <li><a href="datanooblol.modeling.html#datanooblol.modeling.trainer.Trainer.fit">fit() (datanooblol.modeling.trainer.Trainer method)</a>
+
+      <ul>
+        <li><a href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform.fit">(datanooblol.utils.base.BaseFitTransform method)</a>
+</li>
+      </ul></li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.Scaler.fit_transform">fit_transform() (datanooblol.experimenter.scaler.Scaler method)</a>
+
+      <ul>
+        <li><a href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform.fit_transform">(datanooblol.utils.base.BaseFitTransform method)</a>
+</li>
+      </ul></li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.FS_REPO_CONFIG">FS_REPO_CONFIG (datanooblol.configuration.config_manager.LoadFeatureStoreConfig property)</a>
 </li>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.FS_ZONE">FS_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
 </li>
@@ -300,6 +615,30 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadScriptConfig.GENERATE_DOC">GENERATE_DOC (datanooblol.configuration.config_manager.LoadScriptConfig property)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.experiment_catalogue.ExperimentCatalogue.get_experiment_task">get_experiment_task() (datanooblol.experimenter.experiment_catalogue.ExperimentCatalogue method)</a>
+</li>
+      <li><a href="datanooblol.modeling.html#datanooblol.modeling.model_catalogue.ModelCatalogue.get_model">get_model() (datanooblol.modeling.model_catalogue.ModelCatalogue method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_manager.FeatureStoreRegister.get_online_features">get_online_features() (datanooblol.feature_store.feature_manager.FeatureStoreRegister method)</a>
+</li>
+      <li><a href="datanooblol.serving.html#datanooblol.serving.serving_manager.Serving.get_serving_object">get_serving_object (datanooblol.serving.serving_manager.Serving property)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.imputer.GroupImputer">GroupImputer (class in datanooblol.experimenter.imputer)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.data_quality.html#datanooblol.data_quality.health_check.HealthCheck">HealthCheck (class in datanooblol.data_quality.health_check)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.EDAConfig.HOST">HOST (datanooblol.configuration.config_manager.EDAConfig property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -319,12 +658,22 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.encoder.LabelEncoder">LabelEncoder (class in datanooblol.experimenter.encoder)</a>
+</li>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.LANDING_ZONE">LANDING_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
 </li>
-      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig">LoadFeatureConfig (class in datanooblol.configuration.config_manager)</a>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadExpConfig">LoadExpConfig (class in datanooblol.configuration.config_manager)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeastConfig">LoadFeastConfig (class in datanooblol.configuration.config_manager)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig">LoadFeatureConfig (class in datanooblol.configuration.config_manager)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureStoreConfig">LoadFeatureStoreConfig (class in datanooblol.configuration.config_manager)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadModelTrackingConfig">LoadModelTrackingConfig (class in datanooblol.configuration.config_manager)</a>
+</li>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig">LoadRepoConfig (class in datanooblol.configuration.config_manager)</a>
 </li>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadScriptConfig">LoadScriptConfig (class in datanooblol.configuration.config_manager)</a>
@@ -335,7 +684,31 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_manager.FeatureStoreRegister.materialize">materialize (datanooblol.feature_store.feature_manager.FeatureStoreRegister property)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.MATERIALIZE_DAY">MATERIALIZE_DAY (datanooblol.configuration.config_manager.LoadFeatureStoreConfig property)</a>
+</li>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_manager.FeatureStoreRegister.materialize_incremental">materialize_incremental (datanooblol.feature_store.feature_manager.FeatureStoreRegister property)</a>
+</li>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.METADATA_ZONE">METADATA_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadModelTrackingConfig.MLRUN_PATH">MLRUN_PATH (datanooblol.configuration.config_manager.LoadModelTrackingConfig property)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.MMScaler">MMScaler (class in datanooblol.experimenter.scaler)</a>
+</li>
+      <li><a href="datanooblol.modeling.html#datanooblol.modeling.classification_builder.ModelBuilder">ModelBuilder (class in datanooblol.modeling.classification_builder)</a>
+
+      <ul>
+        <li><a href="datanooblol.modeling.html#datanooblol.modeling.model_builder.ModelBuilder">(class in datanooblol.modeling.model_builder)</a>
+</li>
+        <li><a href="datanooblol.modeling.html#datanooblol.modeling.regression_builder.ModelBuilder">(class in datanooblol.modeling.regression_builder)</a>
+</li>
+      </ul></li>
+      <li><a href="datanooblol.modeling.html#datanooblol.modeling.model_catalogue.ModelCatalogue">ModelCatalogue (class in datanooblol.modeling.model_catalogue)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ModelConfig">ModelConfig (class in datanooblol.configuration.config_manager)</a>
+</li>
+      <li><a href="datanooblol.modeling.html#datanooblol.modeling.model_generator.ModelGenerator">ModelGenerator (class in datanooblol.modeling.model_generator)</a>
 </li>
       <li>
     module
@@ -347,17 +720,81 @@
 </li>
         <li><a href="datanooblol.configuration.html#module-datanooblol.configuration.config_manager">datanooblol.configuration.config_manager</a>
 </li>
+        <li><a href="datanooblol.data_quality.html#module-datanooblol.data_quality">datanooblol.data_quality</a>
+</li>
+        <li><a href="datanooblol.data_quality.html#module-datanooblol.data_quality.health_check">datanooblol.data_quality.health_check</a>
+</li>
+        <li><a href="datanooblol.eda.html#module-datanooblol.eda">datanooblol.eda</a>
+</li>
+        <li><a href="datanooblol.eda.html#module-datanooblol.eda.fast_eda">datanooblol.eda.fast_eda</a>
+</li>
+        <li><a href="datanooblol.evaluator.html#module-datanooblol.evaluator">datanooblol.evaluator</a>
+</li>
+        <li><a href="datanooblol.evaluator.html#module-datanooblol.evaluator.regression_evaluator">datanooblol.evaluator.regression_evaluator</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter">datanooblol.experimenter</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.encoder">datanooblol.experimenter.encoder</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.experiment">datanooblol.experimenter.experiment</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.experiment_catalogue">datanooblol.experimenter.experiment_catalogue</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.experiment_generator">datanooblol.experimenter.experiment_generator</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.feature_selector">datanooblol.experimenter.feature_selector</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.imputer">datanooblol.experimenter.imputer</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.scaler">datanooblol.experimenter.scaler</a>
+</li>
+        <li><a href="datanooblol.experimenter.html#module-datanooblol.experimenter.scope_data">datanooblol.experimenter.scope_data</a>
+</li>
         <li><a href="datanooblol.extractor.html#module-datanooblol.extractor">datanooblol.extractor</a>
 </li>
         <li><a href="datanooblol.extractor.html#module-datanooblol.extractor.data_extractor">datanooblol.extractor.data_extractor</a>
+</li>
+        <li><a href="datanooblol.feature_store.html#module-datanooblol.feature_store">datanooblol.feature_store</a>
+</li>
+        <li><a href="datanooblol.feature_store.html#module-datanooblol.feature_store.feature_manager">datanooblol.feature_store.feature_manager</a>
+</li>
+        <li><a href="datanooblol.feature_store.html#module-datanooblol.feature_store.feature_register">datanooblol.feature_store.feature_register</a>
 </li>
         <li><a href="datanooblol.html#module-datanooblol.get_document">datanooblol.get_document</a>
 </li>
         <li><a href="datanooblol.html#module-datanooblol.hello_noob">datanooblol.hello_noob</a>
 </li>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling">datanooblol.modeling</a>
+</li>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.classification_builder">datanooblol.modeling.classification_builder</a>
+</li>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.model_builder">datanooblol.modeling.model_builder</a>
+</li>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.model_catalogue">datanooblol.modeling.model_catalogue</a>
+</li>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.model_generator">datanooblol.modeling.model_generator</a>
+</li>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.regression_builder">datanooblol.modeling.regression_builder</a>
+</li>
+        <li><a href="datanooblol.modeling.html#module-datanooblol.modeling.trainer">datanooblol.modeling.trainer</a>
+</li>
         <li><a href="datanooblol.project_init.html#module-datanooblol.project_init">datanooblol.project_init</a>
 </li>
         <li><a href="datanooblol.project_init.html#module-datanooblol.project_init.initialize">datanooblol.project_init.initialize</a>
+</li>
+        <li><a href="datanooblol.serving.html#module-datanooblol.serving">datanooblol.serving</a>
+</li>
+        <li><a href="datanooblol.serving.html#module-datanooblol.serving.serving_manager">datanooblol.serving.serving_manager</a>
+</li>
+        <li><a href="datanooblol.uploader.html#module-datanooblol.uploader">datanooblol.uploader</a>
+</li>
+        <li><a href="datanooblol.uploader.html#module-datanooblol.uploader.data_uploader">datanooblol.uploader.data_uploader</a>
+</li>
+        <li><a href="datanooblol.utils.html#module-datanooblol.utils">datanooblol.utils</a>
+</li>
+        <li><a href="datanooblol.utils.html#module-datanooblol.utils.base">datanooblol.utils.base</a>
+</li>
+        <li><a href="datanooblol.utils.html#module-datanooblol.utils.calculator">datanooblol.utils.calculator</a>
 </li>
       </ul></li>
   </ul></td>
@@ -371,14 +808,52 @@
   </ul></td>
 </tr></table>
 
-<h2 id="P">P</h2>
+<h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.PREDICTION_ZONE">PREDICTION_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ExperimentConfig.OBJECTIVE">OBJECTIVE (datanooblol.configuration.config_manager.ExperimentConfig property)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.encoder.OneHotEncoder">OneHotEncoder (class in datanooblol.experimenter.encoder)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.feature_selector.PassThrough">PassThrough (class in datanooblol.experimenter.feature_selector)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.EDAConfig.PORT">PORT (datanooblol.configuration.config_manager.EDAConfig property)</a>
+</li>
+      <li><a href="datanooblol.serving.html#datanooblol.serving.serving_manager.Serving.predict">predict() (datanooblol.serving.serving_manager.Serving method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.PREDICTION_ZONE">PREDICTION_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ExperimentConfig.PROJECT">PROJECT (datanooblol.configuration.config_manager.ExperimentConfig property)</a>
+</li>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadScriptConfig.PROJECT_INIT">PROJECT_INIT (datanooblol.configuration.config_manager.LoadScriptConfig property)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeastConfig.PROJECT_NAME">PROJECT_NAME (datanooblol.configuration.config_manager.LoadFeastConfig property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.REFERENCE_ZONE">REFERENCE_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
+</li>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_manager.FeatureStoreRegister.register">register (datanooblol.feature_store.feature_manager.FeatureStoreRegister property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.feature_store.html#datanooblol.feature_store.feature_register.FeatureRegister.register">register() (datanooblol.feature_store.feature_register.FeatureRegister method)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.REPOSITORY">REPOSITORY (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -386,7 +861,49 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.Scaler">Scaler (class in datanooblol.experimenter.scaler)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scope_data.ScopeData">ScopeData (class in datanooblol.experimenter.scope_data)</a>
+</li>
+      <li><a href="datanooblol.serving.html#datanooblol.serving.serving_manager.Serving">Serving (class in datanooblol.serving.serving_manager)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.imputer.SimpleImputer">SimpleImputer (class in datanooblol.experimenter.imputer)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scope_data.ScopeData.split_data">split_data (datanooblol.experimenter.scope_data.ScopeData property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ExperimentConfig.STAGE">STAGE (datanooblol.configuration.config_manager.ExperimentConfig property)</a>
+</li>
       <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadRepoConfig.STAGING_ZONE">STAGING_ZONE (datanooblol.configuration.config_manager.LoadRepoConfig property)</a>
+</li>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.imputer.StatisticsImputer">StatisticsImputer (class in datanooblol.experimenter.imputer)</a>
+</li>
+      <li><a href="datanooblol.data_quality.html#datanooblol.data_quality.health_check.HealthCheck.summary">summary() (datanooblol.data_quality.health_check.HealthCheck method)</a>
+</li>
+      <li><a href="datanooblol.data_quality.html#datanooblol.data_quality.health_check.HealthCheck.summary_tbl">summary_tbl() (datanooblol.data_quality.health_check.HealthCheck method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.feature_selector.BaseSelector.to_frame">to_frame() (datanooblol.experimenter.feature_selector.BaseSelector method)</a>
+
+      <ul>
+        <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.BaseScaler.to_frame">(datanooblol.experimenter.scaler.BaseScaler method)</a>
+</li>
+      </ul></li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadModelTrackingConfig.TRACKING_URI">TRACKING_URI (datanooblol.configuration.config_manager.LoadModelTrackingConfig property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.modeling.html#datanooblol.modeling.trainer.Trainer">Trainer (class in datanooblol.modeling.trainer)</a>
+</li>
+      <li><a href="datanooblol.utils.html#datanooblol.utils.base.BaseFitTransform.transform">transform() (datanooblol.utils.base.BaseFitTransform method)</a>
+</li>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.TTL">TTL (datanooblol.configuration.config_manager.LoadFeatureStoreConfig property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -395,6 +912,12 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datanooblol.html#datanooblol.get_document.update_doc">update_doc() (in module datanooblol.get_document)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.uploader.html#datanooblol.uploader.data_uploader.DataUploader.upload_feature_store">upload_feature_store() (datanooblol.uploader.data_uploader.DataUploader method)</a>
+</li>
+      <li><a href="datanooblol.uploader.html#datanooblol.uploader.data_uploader.DataUploader.upload_zone">upload_zone() (datanooblol.uploader.data_uploader.DataUploader method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -407,10 +930,30 @@
   </ul></td>
 </tr></table>
 
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.configuration.html#datanooblol.configuration.config_manager.ExperimentConfig.Xy_CONFIG">Xy_CONFIG (datanooblol.configuration.config_manager.ExperimentConfig property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="Y">Y</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.YeoJohnsonScaler">YeoJohnsonScaler (class in datanooblol.experimenter.scaler)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datanooblol.html#datanooblol.hello_noob.yo_noob">yo_noob() (in module datanooblol.hello_noob)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Z">Z</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datanooblol.experimenter.html#datanooblol.experimenter.scaler.ZScaler">ZScaler (class in datanooblol.experimenter.scaler)</a>
 </li>
   </ul></td>
 </tr></table>

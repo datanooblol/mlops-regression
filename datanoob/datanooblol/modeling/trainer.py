@@ -7,6 +7,10 @@ from tqdm import tqdm
 from datanooblol.configuration.config_manager import LoadModelTrackingConfig
 
 class Trainer:
+    """
+    A wrapper class for training model and tracking all neccesary artifacts into MLFlow
+    
+    """
     def __init__(self, project:str, experiment_name:str, objective:str, stage:str, experiment, models:list):
         self.project = project
         self.experiment_name = experiment_name

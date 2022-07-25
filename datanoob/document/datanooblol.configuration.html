@@ -95,6 +95,20 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="datanooblol.extractor.html">datanooblol.extractor package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">datanooblol.configuration package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.configuration.config_manager">datanooblol.configuration.config_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-datanooblol.configuration">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.data_quality.html">datanooblol.data_quality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.evaluator.html">datanooblol.evaluator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.experimenter.html">datanooblol.experimenter package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.feature_store.html">datanooblol.feature_store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.modeling.html">datanooblol.modeling package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.serving.html">datanooblol.serving package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.uploader.html">datanooblol.uploader package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datanooblol.utils.html">datanooblol.utils package</a></li>
 </ul>
 
             
@@ -173,12 +187,128 @@
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.EDAConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">EDAConfig</span></span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#EDAConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.EDAConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.EDAConfig.HOST">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HOST</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.EDAConfig.HOST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.EDAConfig.PORT">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PORT</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.EDAConfig.PORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ExperimentConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">ExperimentConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#ExperimentConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.ExperimentConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ExperimentConfig.DESC">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DESC</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.ExperimentConfig.DESC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ExperimentConfig.OBJECTIVE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OBJECTIVE</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.ExperimentConfig.OBJECTIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ExperimentConfig.PROJECT">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PROJECT</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.ExperimentConfig.PROJECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ExperimentConfig.STAGE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">STAGE</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.ExperimentConfig.STAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ExperimentConfig.Xy_CONFIG">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Xy_CONFIG</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.ExperimentConfig.Xy_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadExpConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">LoadExpConfig</span></span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#LoadExpConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadExpConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeastConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">LoadFeastConfig</span></span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#LoadFeastConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeastConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeastConfig.PROJECT_NAME">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PROJECT_NAME</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeastConfig.PROJECT_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureConfig">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">LoadFeatureConfig</span></span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#LoadFeatureConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureConfig.ENTITY">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ENTITY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureConfig.ENTITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURES">
 <span class="sig-name descname"><span class="pre">FEATURES</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#LoadFeatureConfig.FEATURES"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURE_GROUP">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FEATURE_GROUP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURE_GROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureStoreConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">LoadFeatureStoreConfig</span></span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#LoadFeatureStoreConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureStoreConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureStoreConfig.CONFIG">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CONFIG</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureStoreConfig.FS_REPO_CONFIG">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FS_REPO_CONFIG</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.FS_REPO_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureStoreConfig.MATERIALIZE_DAY">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MATERIALIZE_DAY</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.MATERIALIZE_DAY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadFeatureStoreConfig.TTL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TTL</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadFeatureStoreConfig.TTL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadModelTrackingConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">LoadModelTrackingConfig</span></span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#LoadModelTrackingConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadModelTrackingConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadModelTrackingConfig.MLRUN_PATH">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MLRUN_PATH</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadModelTrackingConfig.MLRUN_PATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadModelTrackingConfig.TRACKING_URI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TRACKING_URI</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadModelTrackingConfig.TRACKING_URI" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -193,8 +323,18 @@
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadRepoConfig.DATABASE_ZONE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DATABASE_ZONE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadRepoConfig.DATABASE_ZONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadRepoConfig.DATA_SOURCE">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DATA_SOURCE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadRepoConfig.DATA_SOURCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadRepoConfig.EXPERIMENT_ZONE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EXPERIMENT_ZONE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadRepoConfig.EXPERIMENT_ZONE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -218,6 +358,16 @@
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadRepoConfig.REFERENCE_ZONE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">REFERENCE_ZONE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadRepoConfig.REFERENCE_ZONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadRepoConfig.REPOSITORY">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">REPOSITORY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadRepoConfig.REPOSITORY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadRepoConfig.STAGING_ZONE">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">STAGING_ZONE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadRepoConfig.STAGING_ZONE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -236,6 +386,17 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="datanooblol.configuration.config_manager.LoadScriptConfig.PROJECT_INIT">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PROJECT_INIT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#datanooblol.configuration.config_manager.LoadScriptConfig.PROJECT_INIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ModelConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">datanooblol.configuration.config_manager.</span></span><span class="sig-name descname"><span class="pre">ModelConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datanooblol/configuration/config_manager.html#ModelConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datanooblol.configuration.config_manager.ModelConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datanooblol.configuration.config_manager.BaseConfig" title="datanooblol.configuration.config_manager.BaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseConfig</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="datanooblol.configuration.config_manager.ModelConfig.EXPERIMENT_MODEL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EXPERIMENT_MODEL</span></span><a class="headerlink" href="#datanooblol.configuration.config_manager.ModelConfig.EXPERIMENT_MODEL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

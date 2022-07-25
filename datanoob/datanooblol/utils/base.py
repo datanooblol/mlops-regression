@@ -1,5 +1,8 @@
 class BaseFitTransform:
+    """
+    BaseClass for any classes that are needed to use .fit method
     
+    """
     def __init__(self):
         self._is_fit = False
         self.features = None

@@ -16,10 +16,12 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 
 
 class ModelBuilder:
-    def __init__(self):
-        self.seed=555
-        
+    """
+    Pack models into a single list including model name, model object, and tuning parameters
     
+    """
+    def __init__(self):
+        self.seed=555  
     
     def build(self, model_name:str=None, model=None, parameters:dict=None) -> list:
         param_list = []

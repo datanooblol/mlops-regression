@@ -4,6 +4,10 @@ import os
 import yaml
 
 class FeatureRegister:
+    """
+    Register features and their data types into a feature_group.yaml (config). They later are used in the Feature Store stage.
+    
+    """
     def __init__(self):
         self.config_path = "../config/feature_group.yaml"
     

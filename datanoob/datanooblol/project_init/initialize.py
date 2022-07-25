@@ -10,7 +10,6 @@ def init_data():
     Get .csv data and convert to .parquet and generate a datetime column
     
     """
-    # print(os.getcwd()) # run this command to find your current working directory in case you cannot find a file path
     
     # load raw csv file
     repo_cfg = LoadRepoConfig()

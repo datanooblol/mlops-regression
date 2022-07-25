@@ -7,6 +7,8 @@ from functools import reduce
 
 class ModelGenerator():
     """
+    Generate a list of models based on a selected experiment.yaml
+    
     """
     def __init__(self, experiment_file:str):
         super().__init__()

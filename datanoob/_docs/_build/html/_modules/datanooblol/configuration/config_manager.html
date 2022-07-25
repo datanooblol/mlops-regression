@@ -87,6 +87,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.project_init.html">datanooblol.project_init package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.configuration.html">datanooblol.configuration package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.extractor.html">datanooblol.extractor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.configuration.html">datanooblol.configuration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.data_quality.html">datanooblol.data_quality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.evaluator.html">datanooblol.evaluator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.experimenter.html">datanooblol.experimenter package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.feature_store.html">datanooblol.feature_store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.modeling.html">datanooblol.modeling package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.serving.html">datanooblol.serving package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.uploader.html">datanooblol.uploader package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datanooblol.utils.html">datanooblol.utils package</a></li>
 </ul>
 
             
@@ -154,10 +163,10 @@
 
 <div class="viewcode-block" id="BaseConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.BaseConfig">[docs]</a><span class="k">class</span> <span class="nc">BaseConfig</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_path</span> <span class="o">=</span> <span class="s2">&quot;../config/config.yaml&quot;</span>
     
     <span class="k">def</span> <span class="nf">_get_config</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../config/config.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">config</span></div>
     
@@ -166,6 +175,10 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="s2">&quot;data_repository&quot;</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">REPOSITORY</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;repository&quot;</span><span class="p">]</span>
+        
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">DATA_SOURCE</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;data_source&quot;</span><span class="p">]</span>
@@ -192,25 +205,79 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">METADATA_ZONE</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;metadata&quot;</span><span class="p">]</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;metadata&quot;</span><span class="p">]</span>
     
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">REFERENCE_ZONE</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;reference&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">DATABASE_ZONE</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;database&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">EXPERIMENT_ZONE</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;experiment&quot;</span><span class="p">]</span></div>
+    
+<div class="viewcode-block" id="LoadFeatureStoreConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureStoreConfig">[docs]</a><span class="k">class</span> <span class="nc">LoadFeatureStoreConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="s2">&quot;feature_store_config&quot;</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">FS_REPO_CONFIG</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;fs_repo_config&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">TTL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;ttl&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">MATERIALIZE_DAY</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;materialize_day&quot;</span><span class="p">]</span>
+        <span class="c1"># return self._get_config()[self.param]</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">CONFIG</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># return self._get_config()[self.param][&quot;materialize_day&quot;]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">]</span></div>
+    
+<div class="viewcode-block" id="LoadFeastConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeastConfig">[docs]</a><span class="k">class</span> <span class="nc">LoadFeastConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_path</span> <span class="o">=</span> <span class="s2">&quot;../config/feature_store.yaml&quot;</span>
+        <span class="c1"># self.param = &quot;feature_store_config&quot;</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">PROJECT_NAME</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="s2">&quot;project&quot;</span><span class="p">]</span></div>
     
 <div class="viewcode-block" id="LoadFeatureConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig">[docs]</a><span class="k">class</span> <span class="nc">LoadFeatureConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="s2">&quot;features&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_path</span> <span class="o">=</span> <span class="s2">&quot;../config/feature_group.yaml&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="s2">&quot;feature_group&quot;</span>
     
 <div class="viewcode-block" id="LoadFeatureConfig.FEATURES"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadFeatureConfig.FEATURES">[docs]</a>    <span class="k">def</span> <span class="nf">FEATURES</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="ow">or</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
         <span class="n">feature_list</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">features</span><span class="p">:</span>
-            <span class="n">feature_list</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="n">feature</span><span class="p">]</span>
+            <span class="n">feature_list</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
         
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">feature_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">feature_list</span></div></div>
+            <span class="k">return</span> <span class="n">feature_list</span></div>
 
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">FEATURE_GROUP</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="n">feature_groups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">]</span>
+        <span class="n">filter_out</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;entity&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp_field&quot;</span><span class="p">,</span> <span class="s2">&quot;load_date&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">feat_grp</span><span class="p">:</span><span class="n">dtype</span> <span class="k">for</span> <span class="n">feat_grp</span><span class="p">,</span> <span class="n">dtype</span> <span class="ow">in</span> <span class="n">feature_groups</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">feat_grp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">filter_out</span><span class="p">}</span>
     
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ENTITY</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;entity&quot;</span><span class="p">]</span></div>
+
 <div class="viewcode-block" id="LoadScriptConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadScriptConfig">[docs]</a><span class="k">class</span> <span class="nc">LoadScriptConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -223,6 +290,77 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">GENERATE_DOC</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;generate_doc&quot;</span><span class="p">]</span></div>
+    
+<div class="viewcode-block" id="LoadExpConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadExpConfig">[docs]</a><span class="k">class</span> <span class="nc">LoadExpConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span></div>
+        
+<div class="viewcode-block" id="LoadModelTrackingConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.LoadModelTrackingConfig">[docs]</a><span class="k">class</span> <span class="nc">LoadModelTrackingConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="s2">&quot;model_tracking&quot;</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">TRACKING_URI</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;tracking_uri&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">MLRUN_PATH</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;mlrun_path&quot;</span><span class="p">]</span></div>
+    
+<div class="viewcode-block" id="EDAConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.EDAConfig">[docs]</a><span class="k">class</span> <span class="nc">EDAConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="s2">&quot;eda&quot;</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">HOST</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;host&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">PORT</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">][</span><span class="s2">&quot;port&quot;</span><span class="p">]</span></div>
+    
+<div class="viewcode-block" id="ExperimentConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.ExperimentConfig">[docs]</a><span class="k">class</span> <span class="nc">ExperimentConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experiment_file</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">Xy</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># self.config_path = f&quot;../repository/metadata/experiment/{experiment_file}&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_path</span> <span class="o">=</span> <span class="n">experiment_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="n">Xy</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Xy_CONFIG</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">]</span>
+    
+    <span class="c1"># @property</span>
+    <span class="c1"># def MODEL_AVILABLE(self):</span>
+    <span class="c1">#     return self._get_config()[&quot;model&quot;]</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">PROJECT</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="s2">&quot;project&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">OBJECTIVE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="s2">&quot;objective&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">STAGE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="s2">&quot;stage&quot;</span><span class="p">]</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">DESC</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="s2">&quot;experiment_desc&quot;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="ModelConfig"><a class="viewcode-back" href="../../../datanooblol.configuration.html#datanooblol.configuration.config_manager.ModelConfig">[docs]</a><span class="k">class</span> <span class="nc">ModelConfig</span><span class="p">(</span><span class="n">BaseConfig</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experiment_file</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># self.config_path = f&quot;../repository/metadata/experiment/{experiment_file}&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_path</span> <span class="o">=</span> <span class="n">experiment_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="o">=</span> <span class="s2">&quot;model&quot;</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">EXPERIMENT_MODEL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_config</span><span class="p">()[</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">]</span></div>
 </pre></div>
 
            </div>

@@ -53,7 +53,10 @@ class ExperimentGenerator(BaseFitTransform):
             self.tasks[task_name].fit(X)
     
     def _transform(self, X):
-        proxy = reduce(lambda  left, right: pd.concat([left, right], axis=1), [task.transform(X) for task in self.tasks.values()])
+        # if joining needed
+        # proxy = reduce(lambda  left, right: pd.concat([left, right], axis=1), [task.transform(X) for task in self.tasks.values()])
+        # if no joining needed
+        proxy = pd.concat([task.transform(X) for task in self.tasks.values()], axis=1)
         if "FeatureSelector" in self.exp_cfg.keys():
             proxy = proxy.loc[:, self.exp_cfg["FeatureSelector"]].copy()
         return proxy
