@@ -33,3 +33,6 @@ class PassThrough(BaseSelector):
         super().__init__()
         self.features = features
         
+    def inverse_transform(self, X):
+        return X
+        

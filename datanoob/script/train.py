@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 # Create the parser
 parser = argparse.ArgumentParser()
 # Add an argument
-parser.add_argument('--experiment_name', type=str, required=True)
+parser.add_argument('-exp', '--experiment_name', help="experiment config file", type=str, required=True)
 # Parse the argument
 args = parser.parse_args()
 ##############################################################################

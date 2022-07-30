@@ -9,6 +9,7 @@ services:
     ports:
       # jupyterlab
       - "8888:8888"
+      # - "8888"
       # mlflow
       - "5000:5000"
       # shapash
@@ -21,17 +22,21 @@ services:
       - "555:555"
       # dagster
       - "3000:3000"
+      # flask api
+      - "80:80"
     volumes:
       - .:/usr/src
       - ./datanoob/datanooblol:/opt/conda/lib/python3.9/datanooblol
     working_dir: /usr/src
       # - /usr/src
-    # environment:
-    #   FLASK_DEBUG: "on"
-    #   FLASK_APP: ./app/app.py
+    environment:
+      FLASK_DEBUG: "on"
+      FLASK_APP: ./app/app.py
+################################
     networks:
       app_net:
         ipv4_address: 192.168.0.5
+###############################
     # entrypoint: ["jupyter", "lab", "--ip='*'","--port=8888","--NotebookApp.token=''", "--NotebookApp.password='sha1:a60aa670ae56:dd1afbc5d9585af67965bc9fe187f315ae31f3d8'", "--allow-root", "&"]
     # entrypoint: ["/usr/src/start_service.sh"]
     # command: "/usr/src/start_service.sh || true"
@@ -107,7 +112,7 @@ services:
   #   networks:
   #     app_net:
   #       ipv4_address: 192.168.0.3
-    
+##########################
 networks:
   app_net:
     ipam:

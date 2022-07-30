@@ -24,6 +24,13 @@ class Serving:
         model = pickle.load(open(f"{model_path}/model/model.pkl", 'rb'))
         return experiment, model
     
-    def predict(self, X):
+    def predict(self, X, inverse_y:bool=False):
         loaded_exp, loaded_model = self.get_serving_object
-        return loaded_model.predict(loaded_exp.X.transform(X))
+        y = loaded_model.predict(loaded_exp.X.transform(X))
+        if inverse_y == True:
+            # quick fix needed to find the logic next time
+            # maybe change this .scaler below to more general term like .task
+            # loaded_exp.y.tasks[task].scaler.inverse_transform(y) -> loaded_exp.y.tasks[task].task.inverse_transform(y)
+            task = list(loaded_exp.y.tasks.keys())[0]
+            y = loaded_exp.y.tasks[task].scaler.inverse_transform(y)
+        return y
